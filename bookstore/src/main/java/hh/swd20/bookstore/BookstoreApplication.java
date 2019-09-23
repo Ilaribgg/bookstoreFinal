@@ -33,7 +33,7 @@ public class BookstoreApplication {
 			crepository.save(new Category("Scifi"));
 			crepository.save(new Category("Science"));
 			
-			bookRepository.save(new Book("Harry Potter", "Jami Saani", 1999, "B123", 24, crepository.findByName("Fantasy").get(0)));
+			bookRepository.save(new Book("Harry Potter", "Jami Saanu", 1999, "B123", 24, crepository.findByName("Fantasy").get(0)));
 			bookRepository.save(new Book("Hobbit", "J.R.R Tolkien", 1975, "C123", 20, crepository.findByName("Fantasy").get(0)));
 			
 			log.info("Get all books");
