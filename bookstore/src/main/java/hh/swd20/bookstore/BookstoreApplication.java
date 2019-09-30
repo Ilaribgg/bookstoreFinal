@@ -39,6 +39,8 @@ public class BookstoreApplication {
 			log.info("Get all books");
 			for (Book book : bookRepository.findAll()) {
 				log.info(book.toString());
+				
+				
 			}
 		};
 	}
