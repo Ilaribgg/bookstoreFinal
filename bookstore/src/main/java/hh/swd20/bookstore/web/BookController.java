@@ -70,12 +70,12 @@ public class BookController {
 	@RequestMapping(value = "/newbook", method = RequestMethod.POST)
 	public String saveBook(@ModelAttribute Book book) {
 	bookRepository.save(book);
-		return "redirect:/books";
+		return "redirect:/booklist";
 	}
 	@RequestMapping(value = "/deletebook/{id}", method = RequestMethod.GET)
 	public String deleteBook(@PathVariable("id") Long bookId) {
 		bookRepository.deleteById(bookId);
-		return "redirect:../books";
+		return "redirect:../booklist";
 	}
 	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
 	public String editBook(@PathVariable("id")Long id, Model model) {
@@ -86,6 +86,6 @@ public class BookController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String editedBook(@ModelAttribute Book book) {
 		bookRepository.save(book);
-		return "redirect:/books";
+		return "redirect:/booklist";
 	}
 }
